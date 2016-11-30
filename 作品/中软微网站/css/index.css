@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*统一设置*/
+* {
+	margin:0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,li {
+	list-style: none;
+}
+
+/*定义字体*/
+@font-face {
+	src:url(../font/font_1419313818_3473415.ttf) format('truetype');
+	font-family: iconfont;
+}
+
+html,body {
+	height: 100%;
+	position: relative;
+	background: #2c2769;
+	overflow: hidden;
+}
+
+/*主内容区*/
+#main {
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 45.375px;	
+
+	overflow-y:auto;
+	transition:transform 0.5s ease;
+	-webkit-transition:transform 0.5s ease;
+}
+
+/*渐变背景颜色*/
+.bg {
+	background-image: -webkit-radial-gradient(center, ellipse cover, #dee6cf 0, #4696ad 100%);
+}
+
+/*轮播图片*/
+.swiper-slide img {
+	width: 100%;
+	display: block;
+}
+
+/*内容区*/
+.container {
+	width: 100%;
+	position: relative;
+}
+
+/*滚动字幕*/
+marquee {
+	font-size: 0.75em;
+	margin: 0.5em 0;
+}
+
+/*图片列表*/
+#container ul {
+	overflow: hidden;
+}
+
+#container ul li {
+	position: relative;
+	overflow: hidden;
+	width: 44%;
+	margin-left: 4%;
+	margin-bottom: 1.5em;
+	float: left;
+}
+
+#container ul li img {
+	width: 100%;
+	display: block;
+}
+
+#container ul li .on {
+	position: absolute;
+	top:0;
+}
+
+#container ul li dl {
+	position: absolute;
+	top:0;
+	right: 1em;
+	color: #fff;
+	font-size: 0.75em;
+	padding-top: 1em;
+}
+
+#container ul li dl dt {
+	font-family: iconfont;
+}
+
+/*底部导航*/
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #2c2769;
+	color: #fff;
+	transition:transform 0.5s ease;
+	-webkit-transition:transform 0.5s ease;
+}
+
+footer a {
+	display: block;
+	width: 33.33%;
+	text-align: center;
+	color: #fff;
+	float: left;
+	padding: 0.2em 0;
+}
+
+footer a b {
+	display: block;
+	font-family: iconfont;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+footer a i {
+	display: block;
+	font-style: normal;
+	font-size: 0.75em;
+}
+
+/*左侧导航菜单*/
+.left-nav {
+	position: absolute;
+	left:0;
+	top:0;
+	bottom: 0;
+	right: 40%;
+	background: #666;
+	color: #eee;
+	font-size: 0.85em;
+	line-height: 2.5em;
+	visibility: hidden;	
+}
+
+.left-nav h2 {
+	font-weight: normal;
+	background: #444;
+	padding-left: 2em;
+}
+
+.left-nav ul li {
+	padding-left: 0.75em;
+	border-bottom: 1px solid #999;
+}
+
+/*侧滑移动*/
+.navon {
+	transform:translateX(60%);
+	-webkit-transform:translateX(60%);
+}

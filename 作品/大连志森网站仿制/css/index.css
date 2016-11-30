@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+
+/*头部logo*/
+#header {
+	width: 960px;
+	height: 70px;
+	margin: 0 auto;	
+	min-width: 960px;
+}
+
+/*主导航条*/
+#nav {
+	height: 50px;
+	background: #47A3DA;
+	line-height: 50px;
+	min-width: 960px;
+}
+
+/*内部导航链接*/
+#nav ul {
+	width: 960px;
+	margin: 0 auto;	
+	overflow: hidden;	
+}
+
+#nav ul li {
+	width: 160px;
+	float: left;
+	text-align: center;
+}
+
+#nav ul li a {
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+#nav ul li a:hover {
+	color: #47A3DA;
+	background: #e6f2fa;
+	text-decoration: none;
+}
+
+/*导航链接高亮*/
+.active {
+	background: #0068b7;
+}
+
+/*banner焦点图*/
+#banner {
+	min-width: 960px;
+	height: 250px;
+	background: url(../images/02.jpg) no-repeat left center;
+}
+
+/*主内容区*/
+#main {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+/*新闻事件，产品方案，人才派遣统一设置*/
+#main #news,#main #pro,#main #tal {
+	width: 320px;
+	float: left;
+}
+
+#main #news h3,#main #pro h3,#main #tal h3 {
+	border-left: 5px solid #0068b7;
+	color: #666;
+	text-indent: 10px; 
+}
+
+#main .lanmu {
+	padding: 20px 0;
+}
+
+#main .lanmu img {
+	display: block;
+}
+
+#main #news ul,#main #pro ul,#main #tal ul {
+	width: 90%;
+	margin: 0 auto;
+	list-style-image: url(../images/dot.jpg);
+}	
+
+#main #news ul li,#main #pro ul li,#main #tal ul li {
+	line-height: 20px;
+}
+
+#main .lanmu embed {
+	display: block;
+}
+
+/*案例，招聘，公益统一设置*/
+#main #anli,#main #zhaopin,#main #gongyi {
+	width: 320px;
+	float: left;
+}
+
+#main #anli h3,#main #zhaopin h3,#main #gongyi h3 {
+	color: #0068b7;
+	line-height: 40px;
+}
+
+#main #anli ul,#main #zhaopin ul,#main #gongyi ul {
+	list-style-image: url(../images/dot.jpg);
+}
+
+#main #anli li,#main #zhaopin li,#main #gongyi li {
+	width: 220px;
+	line-height: 20px;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.icon1 {
+	background: url(../images/icon1.png) no-repeat left center;
+}
+
+.icon2 {
+	background: url(../images/icon2.png) no-repeat left center;
+}
+
+.icon3 {
+	background: url(../images/icon3.png) no-repeat left center;
+}
+
+/*分割线*/
+.separater {
+	border: none;	
+	border-top: 2px dotted #ccc;
+	margin-top: 20px; 
+}
+
+/*合作伙伴*/
+#gundong {
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+#gundong h3 {
+	color: #0068b7;
+	line-height: 40px;
+}
+
+#gundong #demo {
+	overflow: hidden;
+}
+
+#gundong #demo img {
+	border:1px solid #ccc;
+}
+
+/*网页底部*/
+#footer {
+	background: #4b4b4b;
+	color: #fff;
+	padding: 20px;
+}
+
+#footer .wrapper {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#footer .wrapper dl {
+	width: 320px;
+	float: left;
+	line-height: 20px;
+}
+
+#footer .wrapper dl dt {
+	font-weight: bold;
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中软国际IT教育</title>
+	<!-- 视口设置 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<!-- 禁止网页中的数字播出电话 -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- 引入css文件 -->
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- 引入轮播swiper插件css -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+</head>
+<body>	
+	<!-- 导航菜单开始 -->
+	<nav id="nav" class="left-nav">
+		<h2>网站导航</h2>
+		<ul>
+			<li>首页</li>
+			<li>卓越简介</li>
+			<li>名企推荐</li>
+			<li>院校合作</li>
+			<li>精彩活动</li>
+			<li>预约报名</li>
+			<li>就业流程</li>
+			<li>常见问题</li>
+		</ul>
+	</nav>
+	<!-- 导航菜单结束 -->
+
+	<!-- 主内容区开始 -->
+	<div id="main" class="bg">
+		<!-- 轮播容器开始 -->
+		<header>
+			<!-- swiper开始 -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/banner01.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="images/banner02.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="images/banner03.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="images/banner04.jpg" alt="">
+					</div>
+				</div>
+				<!-- Add Pagination -->			
+				<div class="swiper-pagination"></div>				
+			</div>
+			<!-- swiper结束 -->
+		</header>
+		<!-- 轮播容器结束 -->
+		<!-- 内容区开始 -->
+		<div id="container">
+			<!-- 滚动字幕开始 -->
+			<marquee>Java+3G即将开班授课，请持续关注</marquee>
+			<!-- 滚动字幕结束 -->
+			<!-- 图片列表开始 -->
+			<ul>
+				<li>
+					<img src="images/item1.jpg" alt="">
+					<img src="images/item1_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe600</dt>
+						<dd>卓越简介</dd>
+					</dl>
+				</li>
+				<li>
+					<img src="images/item2.jpg" alt="">
+					<img src="images/item2_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe601</dt>
+						<dd>精品课程</dd>
+					</dl>
+				</li>
+				<li>
+					<img src="images/item3.jpg" alt="">
+					<img src="images/item3_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe604</dt>
+						<dd>师资介绍</dd>
+					</dl>
+				</li>
+				<li>
+					<img src="images/item4.jpg" alt="">
+					<img src="images/item4_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe607</dt>
+						<dd>就业展示</dd>
+					</dl>
+				</li>
+				<li>
+					<img src="images/item5.jpg" alt="">
+					<img src="images/item5_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe603</dt>
+						<dd>课程试听</dd>
+					</dl>
+				</li>
+				<li>
+					<img src="images/item6.jpg" alt="">
+					<img src="images/item6_on.png" alt="" class="on">
+					<dl>
+						<dt>&#xe602</dt>
+						<dd>预约报名</dd>
+					</dl>
+				</li>				
+			</ul>
+			<!-- 图片列表结束 -->
+		</div>
+		<!-- 内容区结束 -->
+	</div>
+	<!-- 主内容区结束 -->
+
+	<!-- 底部导航开始 -->
+	<footer id="footer">
+		<a href="javascript:void(0);" id="navBtn">
+			<b>&#xe609</b>
+			<i>导航</i>
+		</a>
+		<a href="tel:041139737786">
+			<b>&#xe602</b>
+			<i>电话</i>
+		</a>
+		<a href="#">
+			<b>&#xe603</b>
+			<i>申请试听</i>
+		</a>
+	</footer>
+	<!-- 底部导航结束 -->
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+	<script type="text/javascript" src="js/location.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		// 轮播插件
+		var mySwiper = new Swiper('.swiper-container',{
+		    loop: true,
+			autoplay: 3000,
+			pagination: '.swiper-pagination',			
+			paginationClickable: false,
+			autoplayDisableOnInteraction: false
+		});
+
+		// 获得dom对象
+		var navBtn = document.getElementById('navBtn');
+		var nav = document.getElementById('nav');
+		var main =  document.getElementById('main');
+		var footer =  document.getElementById('footer');
+
+		/*
+			切换导航菜单
+		*/
+		function toggleNav() {
+
+			if (main.className.indexOf('navon') == -1) {
+				main.className += ' navon';
+				footer.className = 'navon';
+				nav.style.visibility = 'visible';
+			} else {
+				main.className = main.className.replace(/ navon/g,'');
+				footer.className = '';
+				nav.style.visibility = 'hidden';
+			}
+
+		}
+
+		// 触摸导航按钮
+		navBtn.onclick = function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+
+			toggleNav();
+		}
+
+		// 触摸导航菜单
+		nav.onclick = function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+
+			toggleNav();
+		}
+	</script>
+</body>
+</html>

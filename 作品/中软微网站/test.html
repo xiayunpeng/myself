@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="发出jsonp请求" id="btn1">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btn1').click(function(event) {
+
+				var url = 'http://api.map.baidu.com/geocoder/v2/?ak=V3h0MpdIltgMoBPxnNqIeSMgYFb7PiyE&location=38.860614891153396,121.5113442053978&output=json&pois=1';
+				
+				$.ajax({
+					url: url,
+					type: 'GET',
+					dataType: 'jsonp', //标明这是jsonp请求
+					data: {},
+					jsonp:'callback', //传递回调函数名称的请求参数名，习惯都叫callback，参数值是jquery随机生成的一个函数名称
+					//jsonpCallback:'m1' //请求参数值，代表回调函数名称，默认是随机产生的
+				})
+				.done(function(data) {
+					console.log(data);
+					alert('请求成功！');
+				})
+				.fail(function() {
+					alert('请求失败！');
+				});	
+
+			});
+		});
+	</script>
+</body>
+</html>
